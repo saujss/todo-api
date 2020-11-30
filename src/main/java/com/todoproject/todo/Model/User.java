@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
 
 @ToString
 @Getter
@@ -11,6 +12,7 @@ import org.springframework.data.annotation.Id;
 public class User {
 
   @Id
+  @Indexed(unique=true)
   String userId;
   String password;
   String userName;

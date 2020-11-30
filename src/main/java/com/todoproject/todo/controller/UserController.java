@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-@RequestMapping(value = "v1/api/user")
+@RequestMapping(value = "/api/v1/user")
 @RestController
 public interface UserController {
 

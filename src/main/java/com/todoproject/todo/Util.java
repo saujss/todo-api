@@ -12,7 +12,11 @@ public class Util {
         .isBlank() && !task.getUserId().isBlank() && !task.getUserId().isEmpty();
   }
 
-  public static boolean validateUser(User user){
-    return true;
+  public static boolean validateUser(User user) {
+    return !user.getUserId().isEmpty() && !user.getUserName().isBlank() && !user.getPassword()
+        .isEmpty()
+        && !user.getPassword().isBlank() && !user.getUserName().isEmpty() && !user.getUserName()
+        .isBlank();
+
   }
 }

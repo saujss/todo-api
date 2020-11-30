@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
 
 @ToString
 @Getter
@@ -12,6 +13,7 @@ import org.springframework.data.annotation.Id;
 public class Task {
 
   @Id
+  @Indexed(unique=true)
   int id;
   String description;
   Status status;
