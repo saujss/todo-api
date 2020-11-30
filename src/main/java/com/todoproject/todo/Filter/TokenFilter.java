@@ -29,7 +29,6 @@ public class TokenFilter extends OncePerRequestFilter {
       String token = request.getHeader("Authorization");
       if (token == null || token.isBlank() || token.isEmpty()) {
         response.setStatus(HttpStatus.UNAUTHORIZED.value());
-        response.setStatus(HttpStatus.FORBIDDEN.value());
         response.getWriter().write("No Auth Token");
         response.getWriter().flush();
         response.getWriter().close();
